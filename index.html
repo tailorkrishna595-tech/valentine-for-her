@@ -3,8 +3,8 @@
 <head>
 <title>For Tanisha ❤️</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
 
+<style>
 body {
   margin: 0;
   height: 100vh;
@@ -21,10 +21,11 @@ body {
 .container {
   z-index: 2;
   animation: fadeIn 2s ease-in-out;
+  padding: 20px;
 }
 
 h1 {
-  font-size: 38px;
+  font-size: 36px;
 }
 
 button {
@@ -53,9 +54,10 @@ button {
 }
 
 #message {
-  margin-top: 30px;
+  margin-top: 25px;
   font-size: 18px;
   max-width: 90%;
+  line-height: 1.6;
 }
 
 @keyframes fadeIn {
@@ -90,7 +92,6 @@ button {
   0% { transform: translateY(0) rotate(45deg); opacity: 1; }
   100% { transform: translateY(-800px) rotate(45deg); opacity: 0; }
 }
-
 </style>
 </head>
 
@@ -103,14 +104,13 @@ button {
   <div id="message"></div>
 </div>
 
-<!-- Background Music -->
+<!-- Soft Background Music -->
 <audio autoplay loop>
   <source src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav" type="audio/mpeg">
 </audio>
 
 <script>
 
-// Moving No button
 function moveButton() {
   var button = document.getElementById("no");
   var x = Math.random() * (window.innerWidth - 100);
@@ -119,17 +119,22 @@ function moveButton() {
   button.style.top = y + "px";
 }
 
-// Romantic message on Yes
 function showLove() {
   document.getElementById("message").innerHTML =
-  "Aaj 13 February hai… aur kal Valentine’s Day hai. ❤️<br><br>" +
-  "Last year jab hum officially saath nahi the, tab bhi maine tumse poocha tha. Shayad tab mujhe andaza nahi tha ki tum meri life ka sabse important hissa ban jaogi. 💫<br><br>" +
-  "Is baar maine directly nahi poocha… par iska matlab ye nahi ki main kam feel karta hoon. Long distance ne hume door kiya hai, par meri feelings tumhare liye har din aur strong hoti gayi hain. 🌍<br><br>" +
-  "27 February ko hamara ek saal complete hone wala hai. Ek saal memories ka, late night calls ka, cute fights ka, aur unconditional love ka. 🫶<br><br>" +
-  "Tanisha, my baby… main har din tumhe choose karta hoon. Aaj bhi. Kal bhi. Hamesha. 💖";
+  "Tanisha, my baby 💖<br><br>" +
+
+  "Today is February 13, and tomorrow is Valentine’s Day. Last year, even before we were officially together, I still asked you to be my Valentine. Back then, I didn’t fully realize how important you would become in my life. But now I know. You became my comfort, my safe place, and the person I think about every single day. 🌙<br><br>" +
+
+  "This year, I didn’t ask right away. And I know you were expecting me to. Maybe long distance makes things feel quiet sometimes. We can’t go on dates. We can’t celebrate the way other couples do. But what we have is stronger than distance. It survives time zones, silence, and miles between us. ❤️<br><br>" +
+
+  "On February 27, we complete one year together. One year of late-night calls, random laughter, small fights, deep talks, missing each other, and choosing each other again and again. Through everything, you stayed. And I stayed. 🫶<br><br>" +
+
+  "If I ever fail to say something at the perfect moment, please know this — I have never failed to love you. Not for a single day. Not for a single second. 🌎<br><br>" +
+
+  "So today, properly, sincerely, and with my whole heart… Tanisha, my baby… will you be my Valentine? Not just for tomorrow. Not just for this year. But for every February, every season, and every lifetime we get together. 💌❤️";
 }
 
-// Generate floating hearts
+/* Generate floating hearts */
 setInterval(function() {
   var heart = document.createElement("div");
   heart.classList.add("heart");
